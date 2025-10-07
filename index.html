@@ -1,36 +1,297 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Carlo's Portfolio</h1>
-    <h2>I'm a web developer</h2>
-    <hr>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diana ❤️ Carlos — Nuestra Boda</title>
+  <meta name="description" content="Celebración de la boda de Diana y Carlos — información, galería y confirmación de asistencia." />
+  <style>
+    :root{
+      --bg:#faf8f6;
+      --accent:#c76b8a;
+      --muted:#6b6b6b;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      --radius:18px;
+      --max-width:1100px;
+      --ff: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--ff);background:linear-gradient(180deg,var(--bg),#fff);color:#222}
+    a{color:inherit;text-decoration:none}
+
+    /* Layout */
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+    header{position:sticky;top:10px;z-index:40;padding:10px 0;background:transparent}
+    .nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#f7a6c0);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(200,100,140,0.18)}
+    nav a{padding:8px 12px;border-radius:12px;font-weight:600;color:var(--muted)}
+    nav a:hover{background:var(--glass);color:#000}
+
+    /* Hero */
+    .hero{min-height:60vh;display:grid;grid-template-columns:1fr;align-items:center;padding:48px 0}
+    .hero-inner{display:flex;gap:32px;flex-direction:column;align-items:center;text-align:center}
+    .names{font-size:clamp(28px,6vw,48px);line-height:1.02;font-weight:800}
+    .date{color:var(--muted);font-weight:600;margin-top:6px}
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(199,107,138,0.15)}
+
+    /* Countdown */
+    .countdown-wrap{width:100%;display:flex;justify-content:center;margin-top:18px}
+    .countdown{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .time-box{background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);padding:18px 20px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-width:110px}
+    .time-val{font-size:clamp(28px,6vw,56px);font-weight:900;letter-spacing:-1px}
+    .time-label{font-size:13px;color:var(--muted);margin-top:6px;font-weight:700}
+
+    @media (max-width:520px){.time-box{min-width:80px;padding:12px}.time-val{font-size:28px}}
+
+    /* Sections */
+    section{padding:48px 0}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(30,30,30,0.06)}
+
+    .grid-2{display:grid;grid-template-columns:1fr 420px;gap:28px}
+    @media (max-width:880px){.grid-2{grid-template-columns:1fr}}
+
+    /* Info */
+    .info p{color:var(--muted);margin:8px 0}
+
+    /* Timeline */
+    .timeline{display:flex;flex-direction:column;gap:14px}
+    .t-item{display:flex;gap:12px;align-items:flex-start}
+    .dot{min-width:12px;height:12px;background:var(--accent);border-radius:50%;margin-top:6px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+    @media (max-width:880px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:480px){.gallery{grid-template-columns:1fr}}
+
+    /* RSVP form */
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea,select{padding:12px;border-radius:10px;border:1px solid #e6e6e6;font-size:15px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:28px 0;text-align:center;color:var(--muted)}
+
+    /* Smooth scroll & utility */
+    html{scroll-behavior:smooth}
+    .fade-up{transform:translateY(6px);opacity:0;animation:fadeUp .7s ease forwards}
+    @keyframes fadeUp{to{transform:none;opacity:1}}
+  </style>
 </head>
 <body>
-    <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
-    <img src="./assets/images/movie-ranking.png" height="200px">
-    <h3><a href="./public/birthday-invite.html">Birthday invite Project</a></h3>
-    <img src="./assets/images/birthday-invite.png" height="200px">
+  <header class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">D&amp;C</div>
+        <div>
+          <div style="font-weight:800">Diana &amp; Carlos</div>
+          <div style="font-size:13px;color:var(--muted)">Nuestra boda</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#evento">Evento</a>
+        <a href="#galeria">Galería</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner card fade-up">
+        <div>
+          <div class="names">Diana &amp; Carlos</div>
+          <div class="date">16 de noviembre de 2025 · Ciudad de México</div>
+        </div>
+        <p class="small">Con mucha ilusión te invitamos a compartir este día tan especial con nosotros. A continuación encontrarás la información del evento, horarios y cómo confirmar tu asistencia.</p>
+
+        <!-- Countdown -->
+        <div class="countdown-wrap">
+          <div class="countdown" aria-live="polite" role="timer">
+            <div class="time-box">
+              <div id="days" class="time-val">0</div>
+              <div class="time-label">Días</div>
+            </div>
+            <div class="time-box">
+              <div id="hours" class="time-val">0</div>
+              <div class="time-label">Horas</div>
+            </div>
+            <div class="time-box">
+              <div id="minutes" class="time-val">0</div>
+              <div class="time-label">Minutos</div>
+            </div>
+            <div class="time-box">
+              <div id="seconds" class="time-val">0</div>
+              <div class="time-label">Segundos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a href="#rsvp" class="btn">Confirmar asistencia</a>
+          <a href="#evento" class="btn ghost">Ver detalles del evento</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="card grid-2 fade-up">
+        <div class="info">
+          <h2>Sobre nosotros</h2>
+          <p>Diana y Carlos se conocieron en la universidad, compartiendo risas, proyectos y sueños. Hoy celebramos el amor que hemos ido construyendo día a día.</p>
+          <p class="small">Nos encantaría que formaras parte de este momento tan importante en nuestras vidas. ¡Trae tus mejores ganas de bailar y celebrar!</p>
+          <h3 style="margin-top:18px">Código de vestimenta</h3>
+          <p class="small">Formal / Cocktail — tonos tierra y pasteles recomendados.</p>
+        </div>
+        <aside>
+          <div style="height:100%;display:flex;flex-direction:column;gap:12px">
+            <div style="flex:1;background:linear-gradient(135deg,#ffe7ef,#fff3f8);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+              <div style="font-weight:800;font-size:20px">Ceremonia</div>
+              <div class="small">16:00 hrs · Jardín El Encanto</div>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,#eaf7ff,#f8fdff);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+              <div style="font-weight:800;font-size:20px">Recepción</div>
+              <div class="small">18:00 hrs · Salón Mirador</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="evento">
+      <h2 style="margin-bottom:12px">Programa del día</h2>
+      <div class="card">
+        <div class="timeline fade-up">
+          <div class="t-item"><div class="dot"></div><div><strong>15:30</strong> - Llegada de invitados y bienvenida.</div></div>
+          <div class="t-item"><div class="dot"></div><div><strong>16:00</strong> - Ceremonia religiosa/civil.</div></div>
+          <div class="t-item"><div class="dot"></div><div><strong>17:30</strong> - Cocktail y fotos.</div></div>
+          <div class="t-item"><div class="dot"></div><div><strong>18:30</strong> - Recepción y banquete.</div></div>
+          <div class="t-item"><div class="dot"></div><div><strong>20:30</strong> - Primer baile y fiesta.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2 style="margin-bottom:12px">Galería</h2>
+      <div class="gallery fade-up">
+        <!-- Reemplaza src por tus fotos reales -->
+        <img src="C:\Users\52344\Desktop\boda\foto1.jpg" alt="Foto 1">
+        <img src="C:\Users\52344\Desktop\boda\foto2.jpg" alt="Foto 2">
+        <img src="C:\Users\52344\Desktop\boda\foto3.jpg" alt="Foto 3">
+        <img src="C:\Users\52344\Desktop\boda\foto4.jpg" alt="Foto 4">
+        <img src="C:\Users\52344\Desktop\boda\foto5.jpg" alt="Foto 5">
+        <img src="C:\Users\52344\Desktop\boda\foto6.jpg" alt="Foto 6">
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <h2 style="margin-bottom:12px">Confirmación de asistencia (RSVP)</h2>
+      <div class="card grid-2 fade-up">
+        <div>
+          <p class="small">Por favor confirma si podrás acompañarnos. Si vienes con acompañante, escribe su nombre en el campo correspondiente.</p>
+          <form onsubmit="event.preventDefault();alert('Gracias, tu confirmación ha sido registrada (simulado).');">
+            <label class="small">Nombre completo</label>
+            <input type="text" placeholder="Ej. Juan Pérez" required>
+            <label class="small">¿Asistirás?</label>
+            <select required>
+              <option value="">Selecciona...</option>
+              <option value="si">Sí, asistiré</option>
+              <option value="no">No podré asistir</option>
+            </select>
+            <label class="small">Acompañante (opcional)</label>
+            <input type="text" placeholder="Nombre del acompañante">
+            <label class="small">Mensaje para los novios (opcional)</label>
+            <textarea rows="4" placeholder="¡Nos vemos pronto!"></textarea>
+            <div style="display:flex;gap:12px;margin-top:8px">
+              <button class="btn" type="submit">Enviar</button>
+              <button class="btn ghost" type="reset">Limpiar</button>
+            </div>
+          </form>
+        </div>
+        <aside>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div class="card" style="padding:14px">
+              <strong>Dirección - Ceremonia</strong>
+              <div class="small">Jardín El Encanto, Calle Falsa 123, Ciudad de México</div>
+            </div>
+            <div class="card" style="padding:14px">
+              <strong>Estacionamiento</strong>
+              <div class="small">Estacionamiento disponible en el lugar y valet a partir de las 15:00 hrs.</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="card fade-up">
+        <p class="small">¿Tienes dudas o necesitas ayuda con alojamiento/traslados? Escríbenos:</p>
+        <p class="small"><strong>Email:</strong> dianaycarlos@ejemplo.com</p>
+        <p class="small"><strong>Teléfono:</strong> +52 1 55 1234 5678</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container small">© Diana &amp; Carlos — Gracias por ser parte de nuestro día</div>
+  </footer>
+
+  <script>
+    // Pequeñas mejoras: animar elementos cuando entran en viewport
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('fade-up'); })
+    },{threshold:0.12});
+    document.querySelectorAll('.card, .gallery, .timeline').forEach(el=>{el.classList.add('fade-up'); obs.observe(el)});
+
+    // Countdown timer hacia 16 de noviembre de 2025 (zona horaria Ciudad de México, UTC-06:00)
+    (function(){
+      // Fecha objetivo: 2025-11-16 00:00:00 (MX -06:00). Cambia la hora si prefieres la hora exacta del evento.
+      const target = new Date('2025-11-16T00:00:00-06:00').getTime();
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      function update(){
+        const now = Date.now();
+        let diff = target - now;
+        if(diff <= 0){
+          daysEl.textContent = '0'; hoursEl.textContent = '0'; minutesEl.textContent = '0'; secondsEl.textContent = '0';
+          // Mensaje especial cuando llegue el día
+          const wrap = document.querySelector('.countdown-wrap');
+          if(wrap && !document.getElementById('hoy')){
+            const el = document.createElement('div');
+            el.id = 'hoy';
+            el.style.marginTop = '12px';
+            el.style.fontWeight = '800';
+            el.style.fontSize = '20px';
+            el.textContent = '¡Hoy es el día! 🎉';
+            wrap.appendChild(el);
+          }
+          clearInterval(timerInterval);
+          return;
+        }
+        const s = Math.floor(diff / 1000);
+        const days = Math.floor(s / (3600*24));
+        const hours = Math.floor((s % (3600*24)) / 3600);
+        const minutes = Math.floor((s % 3600) / 60);
+        const seconds = s % 60;
+        daysEl.textContent = String(days);
+        hoursEl.textContent = String(hours).padStart(2,'0');
+        minutesEl.textContent = String(minutes).padStart(2,'0');
+        secondsEl.textContent = String(seconds).padStart(2,'0');
+      }
+
+      update();
+      const timerInterval = setInterval(update,1000);
+    })();
+  </script>
 </body>
-<hr>
-<footer>
-    <h5> <a href="public/contact.html">Contact me </a> &nbsp;&nbsp;&nbsp; <a href="./public/about.html"> About me</a></h5>
-</footer>
 </html>
