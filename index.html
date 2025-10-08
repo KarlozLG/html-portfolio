@@ -107,20 +107,7 @@
 
   <main class="container">
     <section class="hero">
-      <div class="fondo">
-  <h1>Texto sobre la imagen</h1>
-</div>
 
-<style>
-.fondo {
-  width: 100%;
-  height: 400px;
-  background-image: url('./assets/images/foto1.jpg');
-  background-size: cover;       /* Ajusta la imagen para cubrir todo el div */
-  background-position: center;  /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita */
-}
-</style>
       <div class="hero-inner card fade-up">
         <div>
           <div class="names">Diana &amp; Carlos</div>
@@ -257,7 +244,20 @@
   <footer>
     <div class="container small">© Diana &amp; Carlos — Gracias por ser parte de nuestro día</div>
   </footer>
+      <div class="fondo">
+  <h1>Texto sobre la imagen</h1>
+</div>
 
+<style>
+.fondo {
+  width: 100%;
+  height: 400px;
+  background-image: url('./assets/images/foto1.jpg');
+  background-size: cover;       /* Ajusta la imagen para cubrir todo el div */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+}
+</style>
   <script>
     // Pequeñas mejoras: animar elementos cuando entran en viewport
     const obs = new IntersectionObserver((entries)=>{
