@@ -8,7 +8,7 @@
   <style>
     :root{
       --bg:#faf8f6;
-      --accent:#c76b8a;
+      --accent:#9e2a2a;
       --muted:#6b6b6b;
       --card:#ffffff;
       --glass: rgba(255,255,255,0.6);
@@ -25,35 +25,25 @@
     header{position:sticky;top:10px;z-index:40;padding:10px 0;background:transparent}
     .nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#f7a6c0);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(200,100,140,0.18)}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#925050);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(200,100,140,0.18)}
     nav a{padding:8px 12px;border-radius:12px;font-weight:600;color:var(--muted)}
     nav a:hover{background:var(--glass);color:#000}
 
     /* Hero */
-    .hero{min-height:60vh;display:grid;grid-template-columns:1fr;align-items:center;padding:48px 0}
-    .hero-inner{display:flex;gap:32px;flex-direction:column;align-items:center;text-align:center;background-image: url('./assets/images/foto1.jpg');
-  background-size: cover;       /* Ajusta la imagen para cubrir todo el div */
-  background-position: center;  /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita */}
+    .hero{min-height:60vh;display:grid;grid-template-columns:1fr;align-items:center;padding:48px 0;background: 
+        
+        url('https://i.pinimg.com/1200x/1f/06/0e/1f060e30703ad44a08eb3a06901c6b27.jpg') 
+        center/cover no-repeat;}
+    .hero-inner{display:flex;gap:32px;flex-direction:column;align-items:center;text-align:center}
     .names{font-size:clamp(28px,6vw,48px);line-height:1.02;font-weight:800}
-    .date{color:var(--muted);font-weight:600;margin-top:6px}
+    .date{color:black;font-weight:600;margin-top:6px}
     .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
     .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;font-weight:700;border:none;cursor:pointer}
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(199,107,138,0.15)}
-
-    /* Countdown */
-    .countdown-wrap{width:100%;display:flex;justify-content:center;margin-top:18px}
-    .countdown{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
-    .time-box{background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);padding:18px 20px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,0.06);min-width:110px}
-    .time-val{font-size:clamp(28px,6vw,56px);font-weight:900;letter-spacing:-1px}
-    .time-label{font-size:13px;color:var(--muted);margin-top:6px;font-weight:700}
-
-    @media (max-width:520px){.time-box{min-width:80px;padding:12px}.time-val{font-size:28px}}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(199,107,138,0.15)} 
 
     /* Sections */
-    section{padding:48px 0}
-    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(30,30,30,0.06)}
-
+    .card{border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0, 0, 0, 0.06)}
+/* background:var(--card); */
     .grid-2{display:grid;grid-template-columns:1fr 420px;gap:28px}
     @media (max-width:880px){.grid-2{grid-template-columns:1fr}}
 
@@ -74,7 +64,7 @@
     /* RSVP form */
     form{display:flex;flex-direction:column;gap:12px}
     input,textarea,select{padding:12px;border-radius:10px;border:1px solid #e6e6e6;font-size:15px}
-    .small{font-size:13px;color:var(--muted)}
+    .small{font-size:13px;color:black}
 
     /* Footer */
     footer{padding:28px 0;text-align:center;color:var(--muted)}
@@ -83,6 +73,74 @@
     html{scroll-behavior:smooth}
     .fade-up{transform:translateY(6px);opacity:0;animation:fadeUp .7s ease forwards}
     @keyframes fadeUp{to{transform:none;opacity:1}}
+
+    /*dfsdlfjsl*/
+       /* === Sección del contador con fondo === */
+    .contador-section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* Fondo con imagen y superposición oscura */
+    .contador-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+        url('https://joyeriasenra.com/wp-content/uploads/2023/07/alianzas-de-boda-en-bilbao-1536x894.jpg') 
+        center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .contador-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contador {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .contador div {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      min-width: 120px;
+    }
+
+    .contador span {
+      display: block;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .contador label {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contador span {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -114,52 +172,45 @@
           <div class="date">16 de noviembre de 2025 · El Salto, Jalisco </div>
         </div>
         <p class="small">Con mucha ilusión te invitamos a compartir este día tan especial con nosotros. A continuación encontrarás la información del evento, horarios y cómo confirmar tu asistencia.</p>
+      </div>
 
-        <!-- Countdown -->
-        <div class="countdown-wrap">
-          <div class="countdown" aria-live="polite" role="timer">
-            <div class="time-box">
-              <div id="days" class="time-val">0</div>
-              <div class="time-label">Días</div>
-            </div>
-            <div class="time-box">
-              <div id="hours" class="time-val">0</div>
-              <div class="time-label">Horas</div>
-            </div>
-            <div class="time-box">
-              <div id="minutes" class="time-val">0</div>
-              <div class="time-label">Minutos</div>
-            </div>
-            <div class="time-box">
-              <div id="seconds" class="time-val">0</div>
-              <div class="time-label">Segundos</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="cta">
+      
+    </section>
+        <!-- prueba -->
+  <section class="contador-section">
+    <h2 class="contador-title">Falta muy poco para nuestro gran día 💍</h2>
+    <div class="contador" id="contador">
+      <div><span id="dias">0</span><label>Días</label></div>
+      <div><span id="horas">0</span><label>Horas</label></div>
+      <div><span id="minutos">0</span><label>Minutos</label></div>
+      <div><span id="segundos">0</span><label>Segundos</label></div>
+       
+      
+    </div>
+    <div class="cta">
           <a href="#rsvp" class="btn">Confirmar asistencia</a>
           <a href="#evento" class="btn ghost">Ver detalles del evento</a>
         </div>
-      </div>
-    </section>
+  </section>
+
 
     <section id="nosotros">
       <div class="card grid-2 fade-up">
         <div class="info">
           <h2>Sobre nosotros</h2>
-          <p>Diana y Carlos se conocieron en IBM,trabajando, compartiendo risas, proyectos y sueños. Hoy celebramos el amor que hemos ido construyendo día a día.</p>
+          <p>Diana y Carlos se conocieron en IBM, trabajando, compartiendo risas, proyectos y sueños. Hoy celebramos el amor que hemos ido construyendo día a día.</p>
           <p class="small">Nos encantaría que formaras parte de este momento tan importante en nuestras vidas. ¡Trae tus mejores ganas de celebrar!</p>
           <h3 style="margin-top:18px">Código de vestimenta</h3>
           <p class="small">Formal / Cocktail — tonos tinto y arena reservados para la corte (favor de no utilizarlos)</p>
         </div>
         <aside>
           <div style="height:100%;display:flex;flex-direction:column;gap:12px">
-            <div style="flex:1;background:linear-gradient(135deg,#ffe7ef,#fff3f8);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <div style="flex:1;background:linear-gradient(135deg,#9b4b4b,#fff3f8);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
               <div style="font-weight:800;font-size:20px">Ceremonia</div>
               <div class="small">17:00 hrs · 140A Aeromexico - Las Pintitas, Jalisco</div>
             </div>
-            <div style="flex:1;background:linear-gradient(135deg,#eaf7ff,#f8fdff);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <div style="flex:1;background:linear-gradient(135deg,#e4da80,#f8fdff);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
               <div style="font-weight:800;font-size:20px">Recepción</div>
               <div class="small">19:00 hrs · 140A Aeromexico - Las Pintitas, Jalisco</div>
             </div>
@@ -244,9 +295,6 @@
   <footer>
     <div class="container small">© Diana &amp; Carlos — Gracias por ser parte de nuestro día</div>
   </footer>
-      <div class="fondo">
-  <h1>Texto sobre la imagen</h1>
-</div>
 
 <style>
 .fondo {
@@ -265,48 +313,33 @@
     },{threshold:0.12});
     document.querySelectorAll('.card, .gallery, .timeline').forEach(el=>{el.classList.add('fade-up'); obs.observe(el)});
 
-    // Countdown timer hacia 16 de noviembre de 2025 (zona horaria Ciudad de México, UTC-06:00)
-    (function(){
-      // Fecha objetivo: 2025-11-16 00:00:00 (MX -06:00). Cambia la hora si prefieres la hora exacta del evento.
-      const target = new Date('2025-11-16T00:00:00-06:00').getTime();
-      const daysEl = document.getElementById('days');
-      const hoursEl = document.getElementById('hours');
-      const minutesEl = document.getElementById('minutes');
-      const secondsEl = document.getElementById('seconds');
 
-      function update(){
-        const now = Date.now();
-        let diff = target - now;
-        if(diff <= 0){
-          daysEl.textContent = '0'; hoursEl.textContent = '0'; minutesEl.textContent = '0'; secondsEl.textContent = '0';
-          // Mensaje especial cuando llegue el día
-          const wrap = document.querySelector('.countdown-wrap');
-          if(wrap && !document.getElementById('hoy')){
-            const el = document.createElement('div');
-            el.id = 'hoy';
-            el.style.marginTop = '12px';
-            el.style.fontWeight = '800';
-            el.style.fontSize = '20px';
-            el.textContent = '¡Hoy es el día! 🎉';
-            wrap.appendChild(el);
-          }
-          clearInterval(timerInterval);
-          return;
-        }
-        const s = Math.floor(diff / 1000);
-        const days = Math.floor(s / (3600*24));
-        const hours = Math.floor((s % (3600*24)) / 3600);
-        const minutes = Math.floor((s % 3600) / 60);
-        const seconds = s % 60;
-        daysEl.textContent = String(days);
-        hoursEl.textContent = String(hours).padStart(2,'0');
-        minutesEl.textContent = String(minutes).padStart(2,'0');
-        secondsEl.textContent = String(seconds).padStart(2,'0');
+    //conta test
+      const targetDate = new Date('2025-11-16T00:00:00-06:00').getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        document.getElementById('contador').innerHTML = '<h2>¡Hoy es el día! 🎉</h2>';
+        clearInterval(interval);
+        return;
       }
 
-      update();
-      const timerInterval = setInterval(update,1000);
-    })();
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('dias').textContent = days;
+      document.getElementById('horas').textContent = hours;
+      document.getElementById('minutos').textContent = minutes;
+      document.getElementById('segundos').textContent = seconds;
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
 </body>
 </html>
