@@ -10,7 +10,7 @@
       --bg:#faf8f6;
       --accent:#9e2a2a;
       --muted:#6b6b6b;
-      --card:#ffffff;
+      --card:#e6898915;
       --glass: rgba(255,255,255,0.6);
       --radius:18px;
       --max-width:1100px;
@@ -25,122 +25,186 @@
     header{position:sticky;top:10px;z-index:40;padding:10px 0;background:transparent}
     .nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#925050);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(200,100,140,0.18)}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffffff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(248, 248, 248, 0.18)}
     nav a{padding:8px 12px;border-radius:12px;font-weight:600;color:var(--muted)}
     nav a:hover{background:var(--glass);color:#000}
 
-    /* Hero */
-    .hero{min-height:60vh;display:grid;grid-template-columns:1fr;align-items:center;padding:48px 0;background: 
-        linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.247)),
-        url('https://i.pinimg.com/1200x/1f/06/0e/1f060e30703ad44a08eb3a06901c6b27.jpg') 
+    /* Hero o Banner */
+    .hero{min-height:100vh;display:grid;grid-template-columns:1fr;align-items:center;padding:48px 0;background: 
+        linear-gradient(rgba(255, 255, 255, 0.144), rgba(158, 72, 72, 0.575)),
+        url('https://lh3.googleusercontent.com/pw/AP1GczPhBYd9ElzW_LSUx5XbRnZvMfZmdxAHJFyd_pLlJstaDXNkSQK2Op3tm89TZBNEDWWTT7WT7JSDE2-zOksqKNoVKvu9fGafHuD-zotiAnSeWEWZhwtuyX_I0fGNEPuDUDWgusSED9-0x_ldMDp-oWrksQ=w887-h551-s-no-gm?authuser=0') 
         center/cover no-repeat;}
     .hero-inner{display:flex;gap:32px;flex-direction:column;align-items:center;text-align:center}
-    .names{font-size:clamp(28px,6vw,48px);line-height:1.02;font-weight:800}
-    .date{color:var(--muted);font-weight:600;margin-top:6px}
-    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;font-weight:700;border:none;cursor:pointer}
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(199,107,138,0.15)} 
-
+    .names{font-family: 'Great Vibes', cursive; font-size: 5em; margin-bottom: 15px; letter-spacing: 2px; color: #fff;font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+    .date{font-family: 'Poppins', sans-serif; font-size: 1.4em; color: #ffffff; font-weight: 500; margin-bottom: 20px;}
+    .small2{  font-family: 'Poppins', sans-serif; font-size: .9em; line-height: 1.6em; color: #fffafc; max-width: 700px; margin: 0 auto; opacity: 0.95;}
+ 
     /* Sections */
-    .card{border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0, 0, 0, 0.06)}
-/* background:var(--card); */
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 8px 28px rgba(0, 0, 0, 0.06)}
+
     .grid-2{display:grid;grid-template-columns:1fr 420px;gap:28px}
     @media (max-width:880px){.grid-2{grid-template-columns:1fr}}
 
     /* Info */
     .info p{color:var(--muted);margin:8px 0}
 
-    /* Timeline */
-    .timeline{display:flex;flex-direction:column;gap:14px}
-    .t-item{display:flex;gap:12px;align-items:flex-start}
-    .dot{min-width:12px;height:12px;background:var(--accent);border-radius:50%;margin-top:6px}
 
-    /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-    @media (max-width:880px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:480px){.gallery{grid-template-columns:1fr}}
+    /*-------------------------  ESTILOS PARA SOBRE NOSOTROS   -------------------------------------*/
+  #sobre-nosotros { background-color: #fff; color: #4a0b16; padding: 80px 20px; font-family: 'Poppins', sans-serif; }
+  #sobre-nosotros h2 {font-size: 2.4em; margin-bottom: 5px; color: #6a1b2e; font-weight: 600;text-align: center; margin-bottom: 5px;}
+  .contenido { display: flex; align-items: center; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
+  .texto { flex: 1 1 400px; font-size: 1.1em; line-height: 1.6; color: #4a0b16; }
+  .imagen { flex: 1 1 400px; text-align: center; }
+  .imagen img { width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 6px 20px rgba(122,0,42,0.2); transition: transform 0.3s ease; }
+  .imagen img:hover { transform: scale(1.03); }
+  @media (max-width: 700px) { .contenido { flex-direction: column; gap: 20px; }
+    .texto { text-align: center; }
+    .imagen img { max-width: 90%; } }
+    /*-------------------------  ESTILOS PARA NUETROS PADRES   -------------------------------------*/
+  #padres { background-color: #fff; color: #4b0f1e; padding: 60px 20px; font-family: 'Poppins', sans-serif; text-align: center; }
+  .titulo { font-size: 2.5em; margin-bottom: 10px; color: #6a1b2e; }
+  .linea { width: 80px; height: 4px; background-color: #7a1f3a; border-radius: 10px; margin: 0 auto 40px; }
+  .padres-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+  .tarjeta { background-color: #f9f4f5; border: 2px solid #f0d8dc; border-radius: 20px; padding: 30px; width: 300px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+  .tarjeta:hover { transform: scale(1.03); }
+  .tarjeta h3 { color: #7a1f3a; font-size: 1.5em; margin-bottom: 10px; }
+  .tarjeta p { color: #333; font-size: 1.1em; margin: 5px 0; }
+  .icono { width: 70px; margin-bottom: 15px; opacity: 0.8; }
+  .decoracion img { width: 25px; margin: 10px 5px 0; opacity: 0.6; }
+  .flor img { width: 100px; margin-top: 40px; opacity: 0.2; }
+  @media (max-width: 600px) { .tarjeta { width: 100%; } }
 
-    /* RSVP form */
-    form{display:flex;flex-direction:column;gap:12px}
-    input,textarea,select{padding:12px;border-radius:10px;border:1px solid #e6e6e6;font-size:15px}
-    .small{font-size:13px;color:var(--muted)}
 
+/*-------------------------   PROGRAMA DEL DIA ESTILOS---------------------------------*/
+ #programa { background-color: #fff; color: #4a0b16; padding: 80px 20px; font-family: 'Poppins', sans-serif; }
+  #programa h2 { font-size: 2.4em; margin-bottom: 5px; color: #6a1b2e; font-weight: 600;text-align: center; margin-bottom: 5px;}
+  .lista-programa { text-align: left; list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+  .lista-programa li { background-color: #f9f4f5; border-left: 5px solid #7a002a; border-radius: 8px; padding: 15px 20px; margin-bottom: 15px; font-size: 1.1em; color: #4a0b16; opacity: 0; transform: translateY(20px); animation: desplegar 0.6s forwards; }
+  /* Animación en cascada usando delay incremental */
+  .lista-programa li:nth-child(1) { animation-delay: 0.2s; }
+  .lista-programa li:nth-child(2) { animation-delay: 0.4s; }
+  .lista-programa li:nth-child(3) { animation-delay: 0.6s; }
+  .lista-programa li:nth-child(4) { animation-delay: 0.8s; }
+  .lista-programa li:nth-child(5) { animation-delay: 1s; }
+  @keyframes desplegar { to { opacity: 1; transform: translateY(0); } }
+  /* --- Responsive --- */
+  @media (max-width: 600px) { #programa h2 { font-size: 2.2em; }
+    .lista-programa li { font-size: 1em; padding: 12px 18px; } }
+/*-----------------------------VESTIMENTA-----------------------------------*/
+#vestimenta { background-color: #fff; color: #4a0b16; padding: 80px 20px; font-family: 'Poppins', sans-serif; }
+  #vestimenta h2 {font-size: 2.4em; margin-bottom: 5px; color: #6a1b2e; font-weight: 600;text-align: center; margin-bottom: 5px;}
+  .lista-programa { text-align: left; list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+  .lista-programa li { background-color: #f9f4f5; border-left: 5px solid #7a002a; border-radius: 8px; padding: 15px 20px; margin-bottom: 15px; font-size: 1.1em; color: #4a0b16; opacity: 0; transform: translateY(20px); animation: desplegar 0.6s forwards; }
+  /* Animación en cascada usando delay incremental */
+  .lista-programa li:nth-child(1) { animation-delay: 0.2s; }
+  .lista-programa li:nth-child(2) { animation-delay: 0.4s; }
+  .lista-programa li:nth-child(3) { animation-delay: 0.6s; }
+  @keyframes desplegar { to { opacity: 1; transform: translateY(0); } }
+  /* --- Responsive --- */
+  @media (max-width: 600px) { #vestimenta h2 { font-size: 2.2em; }
+    .lista-programa li { font-size: 1em; padding: 12px 18px; } }
+/*-----------------------------UBICACION-----------------------------------*/
+#ubicacion { background-color: #fff; color: #4a0b16; padding: 80px 20px; font-family: 'Poppins', sans-serif; }
+  #ubicacion h2 {font-size: 2.4em; margin-bottom: 5px; color: #6a1b2e; font-weight: 600;text-align: center; margin-bottom: 5px;}
+  .lista-programa { text-align: left; list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+  .lista-programa li { background-color: #f9f4f5; border-left: 5px solid #7a002a; border-radius: 8px; padding: 15px 20px; margin-bottom: 15px; font-size: 1.1em; color: #4a0b16; opacity: 0; transform: translateY(20px); animation: desplegar 0.6s forwards; }
+  /* Animación en cascada usando delay incremental */
+  .lista-programa li:nth-child(1) { animation-delay: 0.2s; }
+  .lista-programa li:nth-child(2) { animation-delay: 0.4s; }
+  .lista-programa li:nth-child(3) { animation-delay: 0.6s; }
+  @keyframes desplegar { to { opacity: 1; transform: translateY(0); } }
+  /* --- Responsive --- */
+  @media (max-width: 600px) { #ubicacion h2 { font-size: 2.2em; }
+    .lista-programa li { font-size: 1em; padding: 12px 18px; } }
+
+/*-------------------------   Estilos para prohibiciones    -------------------------------------*/
+  /* --- Sección general para PROHIBICIONES --- */
+  #reglas { background-color: #fff; color: #4b0f1e; padding: 70px 25px; font-family: 'Poppins', sans-serif; text-align: center; }
+  .titulo { font-size: 2.4em; margin-bottom: 5px; color: #6a1b2e; font-weight: 600; }
+  .subtitulo { font-size: 1.1em; color: #7a1f3a; opacity: 0.85; margin-bottom: 25px; }
+  .linea { width: 100px; height: 4px; background-color: #7a1f3a; border-radius: 10px; margin: 0 auto 50px; }
+  /* --- Contenedor de las reglas --- */
+  .reglas-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+  /* --- Tarjetas individuales --- */
+  .regla { background-color: #f9f4f5; border: 2px solid #f0d8dc; border-radius: 20px; width: 250px; padding: 25px 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease, background-color 0.3s ease; }
+  .regla:hover { transform: translateY(-5px); background-color: #fff8f9; }
+  .regla img { width: 70px; margin-bottom: 15px; opacity: 0.85; }
+  .regla h3 { font-size: 1.05em; color: #6a1b2e; line-height: 1.4em; font-weight: 500; }
+  /* --- Vista en dispositivos móviles --- */
+  @media (max-width: 700px) { .reglas-grid { display: block; }
+    .regla { width: 100%; max-width: 500px; margin: 0 auto 20px; text-align: left; display: flex; align-items: center; gap: 15px; padding: 15px 20px; }
+    .regla img { width: 45px; margin-bottom: 0; }
+    .regla h3 { font-size: 1em; line-height: 1.3em; } }
+
+      /************************************ ESTILOS GALERIA DE NOVIOS ************************************/
+  /* Contenedor general */
+  #galeria-novios { background-color: #fff8f6; padding: 80px 20px; text-align: center; color: #5a0d1c; font-family: 'Poppins', sans-serif; }
+  #galeria-novios h2 { font-size: 2.5em; margin-bottom: 10px; color: #6a1b2e; }
+  .subtitulo { color: #b88674; font-weight: 500; margin-bottom: 40px; }
+  /* Galería en grid */
+  .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+  /* Cada foto */
+  .foto { position: relative; overflow: hidden; border-radius: 20px; box-shadow: 0 6px 16px rgba(90, 13, 28, 0.15); animation: fadeIn 1s ease forwards; opacity: 0; }
+  /* Animación en cascada */
+  .foto:nth-child(1) { animation-delay: 0.2s; }
+  .foto:nth-child(2) { animation-delay: 0.4s; }
+  .foto:nth-child(3) { animation-delay: 0.6s; }
+  .foto:nth-child(4) { animation-delay: 0.8s; }
+  .foto:nth-child(5) { animation-delay: 1s; }
+  .foto:nth-child(6) { animation-delay: 1.2s; }
+  .foto:nth-child(7) { animation-delay: 1.4s; }
+  .foto:nth-child(8) { animation-delay: 1.6s; }
+  .foto:nth-child(9) { animation-delay: 1.8s; }
+  .foto:nth-child(10) { animation-delay: 2.0s; }
+  .foto:nth-child(11) { animation-delay: 2.2s; }
+  .foto:nth-child(12) { animation-delay: 2.4s; }
+  @keyframes fadeIn { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+  /* Imagen y efecto hover */
+  .foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease, filter 0.6s ease; border-radius: 20px; }
+  .foto:hover img { transform: scale(1.1); filter: brightness(0.85); }
+  /* Efecto overlay al pasar el mouse */
+  .foto::after { content: "💞"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); font-size: 2.5em; color: #fff; opacity: 0; transition: all 0.4s ease; }
+  .foto:hover::after { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  /* Responsive */
+  @media (max-width: 600px) { #galeria-novios h2 { font-size: 2.3em; }
+    .galeria { gap: 15px; } }
+
+
+    /*-------------------------   ESTILOS PARA RSVP    -------------------------------------*/
+  #rsvp { background-color: #fff8f6; padding: 80px 20px; font-family: 'Poppins', sans-serif; color: #4a0b16; text-align: center; }
+  #rsvp h2 { font-size: 2.5em; margin-bottom: 10px; color: #6a1b2e;  }
+  .descripcion { color: #b88674; font-weight: 500; margin-bottom: 40px; }
+  form { max-width: 500px; margin: 0 auto; background: #fff; padding: 30px 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(122, 0, 42, 0.1); text-align: left;
+  }
+  label { font-weight: 500; color: #7a002a; display: block; margin-bottom: 8px; }
+  input, select, textarea { width: 100%; padding: 12px; border: 2px solid #e9c9b0; border-radius: 10px; margin-bottom: 20px; font-size: 1em; font-family: inherit; outline: none; transition: border 0.3s ease; }
+  input:focus, select:focus, textarea:focus { border-color: #7a002a; }
+  .botones { display: flex; gap: 15px; justify-content: center; }
+  .btn { background-color: #7a002a; color: white; padding: 12px 25px; border-radius: 12px; font-weight: 600; border: none; cursor: pointer; transition: background 0.3s ease; }
+  .btn:hover { background-color: #9b1f45; }
+  .btn.ghost { background-color: transparent; border: 2px solid #7a002a; color: #7a002a; }
+  #respuesta { margin-top: 20px; font-weight: 500; color: #7a002a; }
+  @media (max-width: 600px) { form { padding: 20px; }
+    #rsvp h2 { font-size: 2.4em; } }
     /* Footer */
     footer{padding:28px 0;text-align:center;color:var(--muted)}
 
-    /* Smooth scroll & utility */
-    html{scroll-behavior:smooth}
-    .fade-up{transform:translateY(6px);opacity:0;animation:fadeUp .7s ease forwards}
-    @keyframes fadeUp{to{transform:none;opacity:1}}
-
-    /*dfsdlfjsl*/
+    /****************************CONTADOR BONIS****************************************/
        /* === Sección del contador con fondo === */
-    .contador-section {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      overflow: hidden;
-    }
-
+    .contador-section { position: relative; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; overflow: hidden; border-radius: 20px;}
     /* Fondo con imagen y superposición oscura */
-    .contador-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-        url('https://joyeriasenra.com/wp-content/uploads/2023/07/alianzas-de-boda-en-bilbao-1536x894.jpg') 
-        center/cover no-repeat;
-      z-index: -1;
-    }
+    .contador-section::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://joyeriasenra.com/wp-content/uploads/2023/07/alianzas-de-boda-en-bilbao-1536x894.jpg') center/cover no-repeat; z-index: -1; }
+    .contador-title { font-size: 2.5rem; margin-bottom: 2rem; }
+    .contador { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .contador div { background: rgba(255, 255, 255, 0.2); padding: 1.5rem; border-radius: 1rem; min-width: 120px; }
+    .contador span { display: block; font-size: 3rem; font-weight: bold; }
+    .contador label { font-size: 1rem; }
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(199,107,138,0.15)} 
 
-    .contador-title {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .contador {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .contador div {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 1.5rem;
-      border-radius: 1rem;
-      min-width: 120px;
-    }
-
-    .contador span {
-      display: block;
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    .contador label {
-      font-size: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .contador span {
-        font-size: 2rem;
-      }
-    }
+    @media (max-width: 600px) { header h1 { font-size: 2.2rem; }
+      .contador span { font-size: 2rem; } }
   </style>
 </head>
 <body>
@@ -154,33 +218,38 @@
         </div>
       </div>
       <nav>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#evento">Evento</a>
+        <a href="#sobre-nosotros">Nosotros</a>
+        <a href="#programa">Programa</a>
+        <a href="#vestimenta">Vestimenta</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#reglas">Prohibiciones</a>
+        <a href="#padres">Nuestros padres</a>
         <a href="#galeria">Galería</a>
         <a href="#rsvp">RSVP</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
+
+
   </header>
+        <section class="hero">
 
-  <main class="container">
-    <section class="hero">
-
-      <div class="hero-inner card fade-up">
+      <div class="hero-inner fade-up">
         <div>
           <div class="names">Diana &amp; Carlos</div>
           <div class="date">16 de noviembre de 2025 · El Salto, Jalisco </div>
         </div>
-        <p class="small">Con mucha ilusión te invitamos a compartir este día tan especial con nosotros. A continuación encontrarás la información del evento, horarios y cómo confirmar tu asistencia.</p>
+        <p class="small2">Con mucha ilusión te invitamos a compartir este día tan especial con nosotros. A continuación encontrarás la información del evento, horarios y cómo confirmar tu asistencia.</p>
       </div>
-
-
-      
     </section>
-        <!-- prueba -->
-  <section class="contador-section">
+  <main class="container">
+
+
+    <br>
+        <!---------------------------------- CONTADOR ---------------------------------------------------->
+  <section class="contador-section" >
     <h2 class="contador-title">Falta muy poco para nuestro gran día 💍</h2>
-    <div class="contador" id="contador">
+    <div class="contador" id="contador"> 
       <div><span id="dias">0</span><label>Días</label></div>
       <div><span id="horas">0</span><label>Horas</label></div>
       <div><span id="minutos">0</span><label>Minutos</label></div>
@@ -190,122 +259,219 @@
     </div>
     <div class="cta">
           <a href="#rsvp" class="btn">Confirmar asistencia</a>
-          <a href="#evento" class="btn ghost">Ver detalles del evento</a>
+          <a href="#programa" class="btn ghost">Ver programa del evento</a>
         </div>
   </section>
 
+    <!-------------------------------------------- SOBRE NOSOTROS -------------------------------------------------------->
+    <section id="sobre-nosotros">
+  <div class="contenedor">
+    <h2>Sobre Nosotros</h2>
+      <div class="linea"></div> 
+    <div class="contenido">
+      <div class="texto">
+        <p>Nos conocimos en IBM, trabajando, compartiendo risas, proyectos y sueños. Conviviendo dentro del mismo circulo social, donde conforme mas tiempo pasabamos juntos caíamos en cuenta de como nos complementabamos el uno al otro. Hoy celebramos el amor que hemos ido construyendo día a día.</p>
+        <p>Nos encantaría que formaras parte de este momento tan importante en nuestras vidas. ¡Trae tus mejores ganas de celebrar!</p>
+      </div>
+      <div class="imagen">
+        <img src="./assets/images/dianacarlosibm.jpg" alt="Diana y Carlos">
+      </div>
+    </div>
+  </div>
+</section>
+    <!-------------------------------------------- PROGRAMA DEL DIA --------------------------------------------------------> 
+ <section id="programa">
+  <div class="contenedor">
+    <h2>Programa del día</h2>
+      <div class="linea"></div> 
+    <div class="contenido">
+      <div class="texto">
+         <ul class="lista-programa">
+    <li>17:00 - Ceremonia.</li>
+    <li>19:00 - Recepcion</li>
+    <li>19:30 - Cena.</li>
+    <li>20:15 - Brindis.</li>
+  </ul>
+      </div>
+      <div class="imagen">
+        <img src="./assets/images/tintos.jpg" alt="Diana y Carlos">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="nosotros">
-      <div class="card grid-2 fade-up">
-        <div class="info">
-          <h2>Sobre nosotros</h2>
-          <p>Diana y Carlos se conocieron en IBM, trabajando, compartiendo risas, proyectos y sueños. Hoy celebramos el amor que hemos ido construyendo día a día.</p>
-          <p class="small">Nos encantaría que formaras parte de este momento tan importante en nuestras vidas. ¡Trae tus mejores ganas de celebrar!</p>
-          <h3 style="margin-top:18px">Código de vestimenta</h3>
-          <p class="small">Formal / Cocktail — tonos tinto y arena reservados para la corte (favor de no utilizarlos)</p>
+    <!-------------------------------------------- CÓDIGO DE VESTIMENTA -------------------------------------------------------->
+     <section id="vestimenta">
+  <div class="contenedor">
+    <h2>No olvides traer tu mejor traje</h2>
+      <div class="linea"></div> 
+    <div class="contenido">
+      <div class="texto">
+        <h3 font-size="1.2em">Codigo de vestimenta</h3>
+         <ul class="lista-programa">
+    <li> <h5> Formal / Cocktail  </h5><br> Tonos tinto, arena y blanco reservados para la corte (favor de no utilizarlos) <div class="imagen">
+        <img src="./assets/images/novias-tinto.jpg" alt="Diana y Carlos">
+      </div></li>
+  </ul>
+      </div>
+      <div class="imagen">
+        <img src="./assets/images/colores-reservados.jpg" alt="Diana y Carlos">
+      </div>
+    </div>
+  </div>
+</section>
+    <!-------------------------------------------- ubicacion --------------------------------------------------------> 
+
+         <section id="ubicacion">
+  <div class="contenedor">
+    <h2>Ceremonia y Recepcion</h2>
+          <div class="linea"></div> 
+
+    <div class="imagen">
+    <h3>Aeromexico 142, Minerales, Los Gigantes, 45692 Las Pintitas, Jal.</h3>
+    </div>
+    <div class="contenido">
+      <div class="texto">
+        <div class="imagen">
+                  <h3>Maps</h3>
         </div>
-        <aside>
-          <div style="height:100%;display:flex;flex-direction:column;gap:12px">
-            <div style="flex:1;background:linear-gradient(135deg,#9b4b4b,#fff3f8);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-              <div style="font-weight:800;font-size:20px">Ceremonia</div>
-              <div class="small">17:00 hrs · 140A Aeromexico - Las Pintitas, Jalisco</div>
-            </div>
-            <div style="flex:1;background:linear-gradient(135deg,#9b4b4b,#f8fdff);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-              <div style="font-weight:800;font-size:20px">Recepción</div>
-              <div class="small">19:00 hrs · 140A Aeromexico - Las Pintitas, Jalisco</div>
-            </div>
-            <div style="flex:1;background:linear-gradient(135deg,#9b4b4b,#f8fdff);border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;">
-              <div style="font-weight:800;font-size:20px">Google Maps</div>
-              <div class="small"> <img src="./assets/images/qr.png" width="200" height="200"> </img></div>
-            </div>
-
-          </div>
-        </aside>
+         <ul class="lista-programa">
+    <li>  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d800.6395981563627!2d-103.30664896105013!3d20.552199369417977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4cddf625ceeb%3A0x495c4955481babbb!2sAeromexico%20142%2C%20Minerales%2C%20Los%20Gigantes%2C%2045692%20Las%20Pintitas%2C%20Jal.!5e0!3m2!1ses!2smx!4v1760394198162!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </li>
+  </ul>
       </div>
-    </section>
+      <div >
+                <h3 font-size="1.2em">  QR</h3>
+        <img src="./assets/images/qr.png" alt="Diana y Carlos"  width="300" height="300">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="evento">
-      <h2 style="margin-bottom:12px">Programa del día</h2>
-      <div class="card">
-        <div class="timeline fade-up">
-          <div class="t-item"><div class="dot"></div><div><strong>15:30</strong> - Llegada de invitados y bienvenida.</div></div>
-          <div class="t-item"><div class="dot"></div><div><strong>16:00</strong> - Ceremonia religiosa/civil.</div></div>
-          <div class="t-item"><div class="dot"></div><div><strong>17:30</strong> - Cocktail y fotos.</div></div>
-          <div class="t-item"><div class="dot"></div><div><strong>18:30</strong> - Recepción y banquete.</div></div>
-          <div class="t-item"><div class="dot"></div><div><strong>20:30</strong> - Primer baile y fiesta.</div></div>
+
+<!---------------------------- REGLAS PARA EL EVENTO --------------------------------->
+<section id="reglas">
+  <div class="contenedor">
+    <h2 class="titulo">Reglas y Cuidados del Evento</h2>
+    <p class="subtitulo">Les agradecemos su apoyo para mantener un ambiente agradable y armonioso 💕</p>
+    <div class="linea"></div>
+
+    <div class="reglas-grid">
+      <div class="regla">
+        <img src="./assets/images/malos-habitos.png" alt="Prohibido alcohol">
+        <h3>Prohibido el ingreso y/o consumo de alcohol, cigarros y estupefacientes</h3>
+      </div>
+
+      <div class="regla">
+        <img src="./assets/images/mesa.png" alt="Mesas y sillas">
+        <h3>Favor de respetar el acomodo de mesas y sillas</h3>
+      </div>
+
+      <div class="regla">
+        <img src="./assets/images/niños.png" alt="Niños atención">
+        <h3>Prestar atención directa a sus niños</h3>
+      </div>
+
+      <div class="regla">
+        <img src="./assets/images/lista-de-verificacion.png" alt="Programa evento">
+        <h3>Respetar el programa del evento</h3>
+      </div>
+
+      <div class="regla">
+        <img src="./assets/images/seguridad-de-casa.png" alt="Cuidar mobiliario">
+        <h3>Cuidar del lugar y el mobiliario</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!------------------------------------------ PADRES -------------------------------------------->
+<section id="padres">
+  <div class="contenedor">
+    <h2 class="titulo">Nuestros Padres</h2>
+    <div class="linea"></div>
+
+    <div class="padres-grid">
+      <!-- Papás del novio -->
+      <div class="tarjeta">
+        <img src="./assets/images/bahia.png" alt="Familia" class="icono">
+        <h3>Papás del Novio</h3>
+        <p>Ma. del Carmen Gutiérrez Díaz</p>
+        <p>    </p>
+        <div class="decoracion">
+          <img src="./assets/images/amor-mama.png" alt="Corazón">
         </div>
       </div>
-    </section>
 
-     <section id="evento">
-      <h2 style="margin-bottom:12px">Protocolos del evento</h2>
-      <div class="card">
-        <div class="timeline fade-up">
-
-          <div class="t-item"><div>&#127870;</div><div> Prohibido el ingreso y/o consumo de alcohol.</div></div>
-          <div class="t-item"><div> &#128186;</div><div> Favor de respetar el acomodo de mesas y sillas.</div></div>
-          <div class="t-item"><div> &#128118;</div><div> Prestar atencion directa a sus niños.</div></div>
-          <div class="t-item"><div> &#128196;</div><div> Respetar el programa del evento.</div></div>
-          <div class="t-item"><div> &#9962;</div><div> Cuidar del lugar y el mobiliario.</div></div>
+      <!-- Papás de la novia -->
+      <div class="tarjeta">
+        <img src="./assets/images/flor-de-cerezo.png" alt="Familia" class="icono">
+        <h3>Papás de la Novia</h3>
+        <p>Margarita Marcial Celdo</p>
+        <p>Tirso Muñoz Basilio</p>
+        <div class="decoracion">
+          <img src="./assets/images/enamorado.png" alt="Corazón">
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="galeria">
-      <h2 style="margin-bottom:12px">Galería</h2>
-      <div class="gallery fade-up">
-        <!-- Reemplaza src por tus fotos reales -->
-        <img src="./assets/images/foto1.jpg" alt="Foto 1">
-        <img src="./assets/images/foto2.1.jpg" alt="Foto 2">
-        <img src="./assets/images/foto3.jpg" alt="Foto 3">
-        <img src="./assets/images/foto4.jpg" alt="Foto 4">
-        <img src="./assets/images/foto5.jpg" alt="Foto 5">
-        <img src="./assets/images/foto6.jpg" alt="Foto 6">
+    <div class="flor">
+      <img src="./assets/images/hoja-de-laurel.png" alt="Decoración floral">
+    </div>
+  </div>
+</section>
+<!------------------------------------------------ GALERIA ------------------------------------------------------>
+<section id="galeria-novios">
+  <h2>Nuestra Galería</h2>
+      <div class="linea"></div>
+  <p class="subtitulo">Momentos que cuentan nuestra historia</p>
+  
+  <div class="galeria">
+    <div class="foto"><img src="./assets/images/boda-nancy.jpeg" alt="Novios sonriendo"></div>
+    <div class="foto"><img src="./assets/images/foto2.jpg" alt="Camino juntos"></div>
+    <div class="foto"><img src="./assets/images/foto3.jpg" alt="Anillos"></div>
+    <div class="foto"><img src="./assets/images/foto4.jpg" alt="Baile romántico"></div>
+    <div class="foto"><img src="./assets/images/foto5.jpg" alt="Manos entrelazadas"></div>
+    <div class="foto"><img src="./assets/images/foto6.jpg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/barranca.jpeg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/beso.jpeg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/cita-parque.jpeg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/noches-ibm.jpeg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/ganamos-plancha.jpeg" alt="Beso al atardecer"></div>
+    <div class="foto"><img src="./assets/images/selvaMagica.jpeg" alt="Beso al atardecer"></div>
+
+  </div>
+</section>
+    <!-------------------------------------------- RSVP -------------------------------------------------------->
+    
+<section id="rsvp">
+  <div class="contenedor">
+    <h2>Confirmación de asistencia (RSVP)</h2>
+    <p class="descripcion">Por favor confirma si podrás acompañarnos.</p>
+    <form id="rsvpForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+      <label for="asistencia">¿Asistirás?</label>
+      <select id="asistencia" name="asistencia" required>
+        <option value="">Selecciona...</option>
+        <option value="Sí asistiré">Sí asistiré</option>
+        <option value="No podré asistir">No podré asistir</option>
+      </select>
+      <label for="mensaje">Mensaje para los novios (opcional)</label>
+      <textarea id="mensaje" name="mensaje" placeholder="¡Nos vemos pronto!"></textarea>
+      <div class="botones">
+        <button type="submit" class="btn">Enviar</button>
+        <button type="reset" class="btn ghost">Limpiar</button>
       </div>
-    </section>
-
-    <section id="rsvp">
-      <h2 style="margin-bottom:12px">Confirmación de asistencia (RSVP)</h2>
-      <div class="card grid-2 fade-up">
-        <div>
-          <p class="small">Por favor confirma si podrás acompañarnos.</p>
-          <form onsubmit="event.preventDefault();alert('Gracias, tu confirmación ha sido registrada (simulado).');">
-            <label class="small">Nombre completo</label>
-            <input type="text" placeholder="Ej. Juan Pérez" required>
-            <label class="small">¿Asistirás?</label>
-            <select required>
-              <option value="">Selecciona...</option>
-              <option value="si">Sí, asistiré</option>
-              <option value="no">No podré asistir</option>
-            </select>
-            <label class="small">Mensaje para los novios (opcional)</label>
-            <textarea rows="4" placeholder="¡Nos vemos pronto!"></textarea>
-            <div style="display:flex;gap:12px;margin-top:8px">
-              <button class="btn" type="submit">Enviar</button>
-              <button class="btn ghost" type="reset">Limpiar</button>
-            </div>
-          </form>
-        </div>
-        <aside>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div class="card" style="padding:14px">
-              <strong>Dirección - Ceremonia</strong>
-              <div class="small">Aeromexico 140A, Minerales, Los Gigantes, 45692 Las Pintitas, Jal.</div>
-            </div>
-            <div class="card" style="padding:14px">
-              <strong>Estacionamiento</strong>
-              <div class="small">Estacionamiento disponible en el lugar</div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
+    </form>
+    <p id="respuesta"></p>
+  </div>
+</section>
+    <!-------------------------------------------- CONTACTO -------------------------------------------------------->
     <section id="contacto">
       <h2>Contacto</h2>
       <div class="card fade-up">
         <p class="small">¿Tienes dudas? Escríbenos:</p>
-        <p class="small"><strong>Emails:</strong> carloslopezgtz1998@gmail.com  paobanana.27@gmail.com</p>
+        <p class="small"><strong>Emails:</strong> carloslopezgtz1998@gmail.com  dianamunozmarcial@gmail.com</p>
         <p class="small"><strong>Teléfonos:</strong>  34 4103 7136  -   33 1864 2661</p>
       </div>
     </section>
@@ -325,7 +491,33 @@
   background-repeat: no-repeat; /* Evita que se repita */
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
   <script>
+
+     // Inicializar EmailJS con tu User ID
+  (function() {
+    emailjs.init("iu-4uA_Amgzh3S9fR"); // ← reemplaza con tu ID personal de EmailJS
+  })();
+
+  // Manejo del envío
+  document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_default", "template_e6yz51l", {
+      nombre: document.getElementById("nombre").value,
+      asistencia: document.getElementById("asistencia").value,
+      mensaje: document.getElementById("mensaje").value,
+      to_email: "chikilon2015@gmail.com"
+    })
+    .then(function() {
+      document.getElementById("respuesta").innerText = "🎉 ¡Gracias por confirmar tu asistencia!";
+      document.getElementById("rsvpForm").reset();
+    }, function(error) {
+      document.getElementById("respuesta").innerText = "❌ Hubo un error al enviar el mensaje. Intenta nuevamente.";
+      console.error(error);
+    });
+  });
     // Pequeñas mejoras: animar elementos cuando entran en viewport
     const obs = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('fade-up'); })
@@ -360,5 +552,8 @@
     const interval = setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+  <!-- Tipografía elegante de Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
 </body>
 </html>
