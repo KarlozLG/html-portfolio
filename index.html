@@ -219,13 +219,9 @@
       </div>
       <nav>
         <a href="#sobre-nosotros">Nosotros</a>
-        <a href="#programa">Programa</a>
-        <a href="#vestimenta">Vestimenta</a>
         <a href="#ubicacion">Ubicación</a>
-        <a href="#reglas">Prohibiciones</a>
-        <a href="#padres">Nuestros padres</a>
         <a href="#galeria">Galería</a>
-        <a href="#rsvp">RSVP</a>
+        <a href="#rsvp">Confirmación</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -274,7 +270,7 @@
         <p>Nos encantaría que formaras parte de este momento tan importante en nuestras vidas. ¡Trae tus mejores ganas de celebrar!</p>
       </div>
       <div class="imagen">
-        <img src="./assets/images/dianacarlosibm.JPG" alt="Diana y Carlos">
+        <img src="./assets/images/dianacarlosibm.jpg" alt="Diana y Carlos">
       </div>
     </div>
   </div>
@@ -336,9 +332,8 @@
                   <h3>Maps</h3>
         </div>
          <ul class="lista-programa">
-    <li>  <center>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d800.6395981563627!2d-103.30664896105013!3d20.552199369417977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4cddf625ceeb%3A0x495c4955481babbb!2sAeromexico%20142%2C%20Minerales%2C%20Los%20Gigantes%2C%2045692%20Las%20Pintitas%2C%20Jal.!5e0!3m2!1ses!2smx!4v1760394198162!5m2!1ses!2smx" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
-   </center> </li>
+    <li>  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d800.6395981563627!2d-103.30664896105013!3d20.552199369417977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4cddf625ceeb%3A0x495c4955481babbb!2sAeromexico%20142%2C%20Minerales%2C%20Los%20Gigantes%2C%2045692%20Las%20Pintitas%2C%20Jal.!5e0!3m2!1ses!2smx!4v1760394198162!5m2!1ses!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </li>
   </ul>
       </div>
       <div >
@@ -443,30 +438,42 @@
   </div>
 </section>
     <!-------------------------------------------- RSVP -------------------------------------------------------->
+    <section id="rsvp" style="background-color:#fdf7f6; padding:40px 20px; color:#5a0d1c;">
+  <div class="contenedor" style="max-width:500px; margin:auto; background:white; border-radius:20px; padding:30px; box-shadow:0 4px 10px rgba(0,0,0,0.1); border:1px solid #e5c6b0;">
+    <h2 style="color:#7a002a; text-align:center;">Confirmación de asistencia (RSVP)</h2>
+    <p class="descripcion" style="text-align:center; margin-bottom:20px;">Por favor confirma si podrás acompañarnos.</p>
     
-<section id="rsvp">
-  <div class="contenedor">
-    <h2>Confirmación de asistencia (RSVP)</h2>
-    <p class="descripcion">Por favor confirma si podrás acompañarnos.</p>
-    <form id="rsvpForm">
+    <form id="rsvpForm" style="display:flex; flex-direction:column; gap:15px;">
       <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+
       <label for="asistencia">¿Asistirás?</label>
-      <select id="asistencia" name="asistencia" required>
+      <select id="asistencia" name="asistencia" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
         <option value="">Selecciona...</option>
         <option value="Sí asistiré">Sí asistiré</option>
         <option value="No podré asistir">No podré asistir</option>
       </select>
+
+      <label for="comida">¿Comes carne?</label>
+      <select id="comida" name="comida" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+        <option value="">Selecciona...</option>
+        <option value="Sí como carne">Sí como carne</option>
+        <option value="No como carne">No como carne</option>
+      </select>
+
       <label for="mensaje">Mensaje para los novios (opcional)</label>
-      <textarea id="mensaje" name="mensaje" placeholder="¡Nos vemos pronto!"></textarea>
-      <div class="botones">
-        <button type="submit" class="btn">Enviar</button>
-        <button type="reset" class="btn ghost">Limpiar</button>
+      <textarea id="mensaje" name="mensaje" placeholder="¡Nos vemos pronto!" style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+
+      <div class="botones" style="display:flex; gap:10px; justify-content:center;">
+        <button type="submit" class="btn" style="background:#7a002a; color:white; padding:10px 20px; border:none; border-radius:10px; cursor:pointer;">Enviar</button>
+        <button type="reset" class="btn ghost" style="background:#f8e6d0; color:#7a002a; border:none; border-radius:10px; padding:10px 20px; cursor:pointer;">Limpiar</button>
       </div>
     </form>
-    <p id="respuesta"></p>
+
+    <p id="respuesta" style="text-align:center; margin-top:15px; font-weight:bold;"></p>
   </div>
 </section>
+
     <!-------------------------------------------- CONTACTO -------------------------------------------------------->
     <section id="contacto">
       <h2>Contacto</h2>
@@ -492,24 +499,22 @@
   background-repeat: no-repeat; /* Evita que se repita */
 }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <script>
 
-     // Inicializar EmailJS con tu User ID
   (function() {
-    emailjs.init("iu-4uA_Amgzh3S9fR"); // ← reemplaza con tu ID personal de EmailJS
+    emailjs.init("iu-4uA_Amgzh3S9fR"); // Tu Public Key
   })();
 
-  // Manejo del envío
   document.getElementById("rsvpForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     emailjs.send("service_default", "template_e6yz51l", {
       nombre: document.getElementById("nombre").value,
       asistencia: document.getElementById("asistencia").value,
-      mensaje: document.getElementById("mensaje").value,
-      to_email: "chikilon2015@gmail.com"
+      comida: document.getElementById("comida").value,
+      mensaje: document.getElementById("mensaje").value
     })
     .then(function() {
       document.getElementById("respuesta").innerText = "🎉 ¡Gracias por confirmar tu asistencia!";
