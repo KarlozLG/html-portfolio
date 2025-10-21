@@ -517,6 +517,7 @@
       mensaje: document.getElementById("mensaje").value
     })
     .then(function() {
+      alert("🎉 ¡Gracias por confirmar tu asistencia!");
       document.getElementById("respuesta").innerText = "🎉 ¡Gracias por confirmar tu asistencia!";
       document.getElementById("rsvpForm").reset();
     }, function(error) {
